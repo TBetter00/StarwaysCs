@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManagerC : MonoBehaviour
 {
     private Gamemanager gamemanager;
     public GameObject enemyPrefab;
@@ -46,7 +46,7 @@ public class EnemyManager : MonoBehaviour
         currentEnemyCount++;
 
         // Tell the enemy to notify this manager when it is destroyed
-        enemy status = newEnemy.AddComponent<enemy>();
+        enemyC status = newEnemy.AddComponent<enemyC>();
         status.manager = this;
     }
 
