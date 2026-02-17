@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 308004485}
   - component: {fileID: 308004484}
   - component: {fileID: 308004483}
+  - component: {fileID: 308004487}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -302,6 +303,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &308004487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308004482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2ba77f18e8b4e9fa25ec8e7538ecec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cardmanager
+  cardImage: {fileID: 593934145}
+  cardName: {fileID: 1783750399}
+  cardDescription: {fileID: 693709590}
+  card: {fileID: 0}
 --- !u!1 &499762722
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1016,7 @@ GameObject:
   - component: {fileID: 1764718332}
   - component: {fileID: 1764718331}
   - component: {fileID: 1764718330}
+  - component: {fileID: 1764718333}
   m_Layer: 5
   m_Name: Btn2
   m_TagString: Untagged
@@ -1069,7 +1087,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1764718331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1764718333}
+        m_TargetAssemblyTypeName: CardAdder, Assembly-CSharp
+        m_MethodName: addCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764718331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,6 +1138,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764718328}
   m_CullTransparentMesh: 1
+--- !u!114 &1764718333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764718328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed78b494b0b2d4ce4aba95a96e641e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardAdder
+  card: {fileID: 11400000, guid: 1e998389b06ae49a0b676f47bb41ef33, type: 2}
 --- !u!1 &1783750397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1242,7 @@ GameObject:
   - component: {fileID: 1990716209}
   - component: {fileID: 1990716208}
   - component: {fileID: 1990716207}
+  - component: {fileID: 1990716210}
   m_Layer: 5
   m_Name: Btn1
   m_TagString: Untagged
@@ -1269,7 +1313,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1990716208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990716210}
+        m_TargetAssemblyTypeName: CardAdder, Assembly-CSharp
+        m_MethodName: addCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1990716208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,6 +1364,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990716205}
   m_CullTransparentMesh: 1
+--- !u!114 &1990716210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990716205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed78b494b0b2d4ce4aba95a96e641e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardAdder
+  card: {fileID: 11400000, guid: 6c477ea733b714135acd54e3bebc0141, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
