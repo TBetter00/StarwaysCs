@@ -18,10 +18,12 @@ public class ItemSlot : MonoBehaviour
         refreshDisplay();
     }
 
-    public void RemoveItem()
+    public Item RemoveItem()
     {
+        Item item = this.item;
         this.item = null;
         refreshDisplay();
+        return item;
     }
 
     public void refreshDisplay()
