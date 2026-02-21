@@ -1,12 +1,23 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager instance;
     public GameObject inventoryUI;
     public ItemSlot[] itemSlots;
     [Header("Debug")]
     [SerializeField]
     Item itemTest;
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;
+    }
 
     public void Update()
     {
@@ -35,8 +46,20 @@ public class InventoryManager : MonoBehaviour
         return false;
     }
 
+    public void DeselectedAllSlot()
+    {
+        foreach (ItemSlot i in itemSlots)
+        {
+            i.OnDeselected();
+        }
+    }
+    /// <summary>
+    /// For Debug
+    /// </summary>
     public void addTestItem()
     {
         AddItem(itemTest);
     }
+
+
 }

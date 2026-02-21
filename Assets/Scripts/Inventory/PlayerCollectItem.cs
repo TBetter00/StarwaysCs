@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class PlayerCollectItem : MonoBehaviour
 {
-    public InventoryManager inventoryManager;
+    // public InventoryManager inventoryManager;
     void Awake()
     {
-        inventoryManager = FindAnyObjectByType<InventoryManager>();
+        // inventoryManager = FindAnyObjectByType<InventoryManager>();
     }
 
     bool Collect(Item item)
     {
         if (item == null) return false;
-        return inventoryManager.AddItem(item);
+        return InventoryManager.instance.AddItem(item);
+        // return true;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
