@@ -23,7 +23,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         rootCanvas = GetComponentInParent<Canvas>(); // Find the nearest parent canvas once
         RefreshDisplay();
     }
-
+    #region Add/Remove
     public void AddItem(Item item)
     {
         Debug.Log("Add in slot");
@@ -41,6 +41,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         RefreshDisplay();
         return item;
     }
+    #endregion
+
     /// <summary>
     /// set Display by mulitple boolean variable
     /// </summary>
@@ -49,7 +51,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         itemImage?.gameObject.SetActive(hasItem);
         selectedDisplay?.SetActive(isSelected);
     }
-
+    #region Selected
     public void OnSelected()
     {
         InventoryManager.instance.DeselectedAllSlot();
@@ -71,7 +73,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
     {
         ToggleSelected();
     }
+    #endregion
 
+    #region Drag
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (!hasItem || itemImage == null || !isSelected)
@@ -153,4 +157,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
         draggingSlot.AddItem(tempItem);
         OnSelected();
     }
+
+    #endregion
 }
