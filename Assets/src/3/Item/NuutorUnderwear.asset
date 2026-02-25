@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda14d357b1b04276bdf4c25bd343433, type: 3}
   m_Name: NuutorUnderwear
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: b9d38dbf73d4b4f3ebacd58be749260c, type: 3}
   itemName: NuutorUnderwear
   itemDescription: 

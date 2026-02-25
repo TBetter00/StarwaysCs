@@ -19,6 +19,10 @@ public class InventoryManager : MonoBehaviour
         {
             toggleInventoryUI();
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            AddTestItem();
+        }
     }
 
     void toggleInventoryUI()
@@ -42,5 +46,12 @@ public class InventoryManager : MonoBehaviour
     public void AddTestItem()
     {
         AddItem(testItem);
+    }
+    public void DeselectedAllSlot()
+    {
+        foreach (ItemSlot i in itemSlots)
+        {
+            i.Deselected();
+        }
     }
 }

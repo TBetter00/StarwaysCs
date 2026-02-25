@@ -22,7 +22,7 @@ public class ThirdpersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //jump
+        //  jump
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)

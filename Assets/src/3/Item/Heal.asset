@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda14d357b1b04276bdf4c25bd343433, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 13c08f59391834967a5aa9134e2a6840, type: 3}
   itemName: Heal
   itemDescription: 
