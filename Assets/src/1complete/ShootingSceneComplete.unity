@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManagerC
   enemyPrefab: {fileID: 5121979174578563001, guid: f8b5bcb34bb8e479ca03f909b9bf2b7c, type: 3}
-  maxEnemySpawn: 5
-  spawnDelay: 2
+  maxEnemySpawn: 20
+  spawnDelay: 1
   spawnHeight: 1
   spawnCenter: {x: 0, y: 0, z: 0}
   spawnWidth: 50
@@ -490,6 +490,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &916239279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916239280}
+  - component: {fileID: 916239282}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &916239280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916239279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &916239282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916239279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc2f3921c75a4f4a89ebba0ffd34fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
+  point: 0
+  timeRunner: 0
+  difficultyBase: 1.1
+  initialDecreaseRate: 1
+  exponentialDrop: 0
+  maxTime: {fileID: 0}
+  currentTime: {fileID: 0}
+  score: {fileID: 0}
 --- !u!1 &1601890078
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,3 +951,4 @@ SceneRoots:
   - {fileID: 781197228}
   - {fileID: 9182989758165067979}
   - {fileID: 1601890080}
+  - {fileID: 916239280}

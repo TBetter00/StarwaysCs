@@ -41,21 +41,21 @@ public class Gamemanager : MonoBehaviour
     }
     void EndGame()
     {
-        // 1. Get the previous record (returns 0 if it's the first time playing)
-        float personalRecord = PlayerPrefs.GetFloat("BestTime", 0);
+        // // 1. Get the previous record (returns 0 if it's the first time playing)
+        // float personalRecord = PlayerPrefs.GetFloat("BestTime", 0);
 
-        // 2. Check if this is a new record (faster time is smaller)
-        // We check if record is 0 for the very first game ever played
-        if (timeRunner > personalRecord || personalRecord == 0)
-        {
-            Debug.Log("New Record! Saving: " + timeRunner);
-            PlayerPrefs.SetFloat("BestTime", timeRunner);
-            PlayerPrefs.Save(); // Forces Unity to write it to the disk immediately
-        }
-        else
-        {
-            Debug.Log("You were slower. Record remains: " + personalRecord);
-        }
+        // // 2. Check if this is a new record (faster time is smaller)
+        // // We check if record is 0 for the very first game ever played
+        // if (timeRunner > personalRecord || personalRecord == 0)
+        // {
+        //     Debug.Log("New Record! Saving: " + timeRunner);
+        //     PlayerPrefs.SetFloat("BestTime", timeRunner);
+        //     PlayerPrefs.Save(); // Forces Unity to write it to the disk immediately
+        // }
+        // else
+        // {
+        //     Debug.Log("You were slower. Record remains: " + personalRecord);
+        // }
 
         QuitLogic();
     }

@@ -53,6 +53,7 @@ public class EnemyManagerC : MonoBehaviour
     public void EnemyDied()
     {
         // gamemanager.point += 5;
+        ScoreManager.instance.addScore(1);
         currentEnemyCount--;
     }
 
